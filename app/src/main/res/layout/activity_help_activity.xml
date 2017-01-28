@@ -4,17 +4,16 @@
     android:id="@+id/activity_help_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="2dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp"
     tools:context="com.example.anish.automatedio.Help_activity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp">
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +33,7 @@
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="An automation consosts of following:"/>
+         android:text="An automation consists of following:"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
@@ -51,14 +50,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="An action that the device can perform(e.g. set wallpaper,take pictures)"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="*One or more  constraints"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="A constraint that must be satisfied for the trigger to fire(e.g. day of week,battery level)"/>
 
     <TextView
         android:paddingTop="15dp"
@@ -80,14 +71,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select an action from the list and configure as prompted. Select additional actions until you have all the actions you desire. When done, click the next button to move on. Note that you must select atleast one action before moving on to the list of constraints."/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To add a constraint select it from the list and configure as prompted. Select additional constraints and when compplete click the next button to move on. There is no requirement to add any constraints before moving on."/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="You will be prompted to give tht task a name so you can identify  it later. Enter a suitable name and click 'OK'. You will see the new task appear in your tasks list."/>
+        android:text="You will be prompted to give that task a name so you can identify it later. Enter a suitable name and click 'OK'. You will see the new task appear in your tasks list."/>
 
     <TextView
         android:paddingTop="15dp"

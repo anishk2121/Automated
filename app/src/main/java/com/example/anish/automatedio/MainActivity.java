@@ -1,9 +1,10 @@
 package com.example.anish.automatedio;
 
+
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,22 +12,24 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.CompoundButton;
-import android.widget.FrameLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    FrameLayout fl1,fl2,fl3;
+    CardView cv1,cv2,cv3;
     Switch aSwitch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppThemeD);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -38,27 +41,29 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        fl1=(FrameLayout)findViewById(R.id.fl1);
-        fl1.setOnClickListener(new View.OnClickListener() {
+        cv1=(CardView) findViewById(R.id.cv1);
+        cv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Hello you want to view your event",Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(getApplicationContext(),Tasks.class);
+                startActivity(i);
             }
         });
 
-        fl2=(FrameLayout)findViewById(R.id.fl2);
-        fl2.setOnClickListener(new View.OnClickListener() {
+        cv2=(CardView) findViewById(R.id.cv2);
+        cv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),New_Task.class);
                 startActivity(i);
             }
         });
-        fl3=(FrameLayout)findViewById(R.id.fl3);
-        fl3.setOnClickListener(new View.OnClickListener() {
+        cv3=(CardView) findViewById(R.id.cv3);
+        cv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Hello you want to go to settings",Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(getApplicationContext(),Settings.class);
+                startActivity(i);
             }
         });
 
@@ -74,7 +79,11 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -93,16 +102,27 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.settings) {
-            // Handle the camera action
+            Intent i=new Intent(getApplicationContext(),Settings.class);
+            startActivity(i);
         } else if (id == R.id.help) {
             Intent i=new Intent(getApplicationContext(),Help_activity.class);
             startActivity(i);
 
         } else if (id == R.id.about) {
+            Intent i=new Intent(getApplicationContext(),About.class);
+            startActivity(i);
+        }
+        else if(id== R.id.feedback){
+            Intent i=new Intent(getApplicationContext(),Feedback.class);
+            startActivity(i);
         }
         else if(id == R.id.fb){
+            Intent in=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/automate.io/"));
+            startActivity(in);
         }
         else if(id == R.id.twitter){
+            Intent in=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com/automate/"));
+            startActivity(in);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

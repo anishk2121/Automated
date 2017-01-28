@@ -5,6 +5,27 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_new__task">New_Task</string>
+    <string name="title_activity_new__task">New Task</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello!</string>
+    <string name="slide_1_desc">The easiest way to enable task to automate your Device</string>
+
+    <string name="slide_2_title">Add Tasks</string>
+    <string name="slide_2_desc">Add a task name</string>
+
+    <string name="slide_3_title">Select Trigger</string>
+    <string name="slide_3_desc">Choose what should happen to automate your task</string>
+
+    <string name="slide_4_title">Select Task</string>
+    <string name="slide_4_desc">Select your task which should be automated</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
